@@ -1,4 +1,4 @@
-local _ = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/sol"))()
+local _ = loadstring(game:HttpGet("https://raw.githubusercontent.com/TRASHUX/EW-Ignore/main/lua"))()
 local b = _:New({Name = "                              FiveDuels | Avatar Editor", FolderToSave = "SolarisLibStuff"})
 local _ = b:Tab("Info")
 local a = _:Section("Click for message")
@@ -2278,4 +2278,3 @@ game:service "Players".LocalPlayer.Idled:connect(
         c.Text = "Status : Active"
     end
 )
-print("This script has an FPS & ANTI-AFK built into it.")

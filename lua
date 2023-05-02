@@ -24,7 +24,7 @@ a:Button(
     "Credits",
     function()
         NotifyLib.prompt("Credits", "Copied to your clipboard", 5)
-        setclipboard("TRA$H#0001")
+        setclipboard("TRA$H#3149")
     end
 )
 
@@ -2119,22 +2119,18 @@ g:Button(
 _:Button(
     "Headless",
     function()
-        getgenv().game.Players.LocalPlayer.Character.Head.Transparency = 1
-        getgenv().game.Players.LocalPlayer.Character.Head.face:Destroy()
-        getgenv().game.Players.LocalPlayer.Character.Head.face:Destroy()
+while wait() do
+        me = game:GetService("Players").LocalPlayer.Character
+        if me:FindFirstChild("Head") and me:FindFirstChild("Humanoid") then
+            me.Head.MeshId = "rbxassetid://6686307858" 
+        end
     end
+end
 )
 b:Button(
     "Right Korblox",
     function()
-        local _ = game.Players.LocalPlayer
-        local _ = _.Character
-        _.RightLowerLeg.MeshId = "902942093"
-        _.RightLowerLeg.Transparency = "1"
-        _.RightUpperLeg.MeshId = "http://www.roblox.com/asset/?id=902942096"
-        _.RightUpperLeg.TextureID = "http://roblox.com/asset/?id=902843398"
-        _.RightFoot.MeshId = "902942089"
-        _.RightFoot.Transparency = "1"
+loadstring(game:HttpGet("https://raw.githubusercontent.com/kr4sk/wsg/main/FIXEDKOBLOX.lua"))()
     end
 )
 b:Button(
@@ -2229,7 +2225,6 @@ d.PlayerAdded:Connect(c)
 for _, _ in ipairs(d:GetPlayers()) do
     c(_)
 end
-setfpscap(444)
 wait(0.5)
 local _ = Instance.new("ScreenGui")
 local d = Instance.new("TextLabel")
@@ -2268,13 +2263,3 @@ c.Font = Enum.Font.ArialBold
 c.Text = "Status: Active"
 c.TextColor3 = Color3.new(0, 1, 1)
 c.TextSize = 20
-local _ = game:service "VirtualUser"
-game:service "Players".LocalPlayer.Idled:connect(
-    function()
-        _:CaptureController()
-        _:ClickButton2(Vector2.new())
-        c.Text = "Roblox tried to kick u but i kicked him instead"
-        wait(2)
-        c.Text = "Status : Active"
-    end
-)

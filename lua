@@ -24,7 +24,7 @@ a:Button(
     "Credits",
     function()
         NotifyLib.prompt("Credits", "Copied to your clipboard", 5)
-        setclipboard("TRA$H#3149")
+        setclipboard("TRA$H#0001")
     end
 )
 
